@@ -1,0 +1,239 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+html,
+body {
+	height: 100%;
+}
+body {
+	width: 100%;
+    height: 97%;
+	background: linear-gradient(45deg, #b9699f, #80bbd3);
+	font-family: sans-serif;
+	font-weight: 100;
+}
+
+.titu{ /* contenedor de la imagen, el titulo y linkmenu */
+	border: 5px inset #74003f; /* borde de 3px de ancho de color rosa */
+	/* el estilo del borde es 3D */
+    margin: 15px;
+    height: 135px;
+	padding-left: 10px;
+    display: flex;
+	/* coloca el titulo a lado de la imagen */
+	/* también es necesario para las otras dos instrucciones */
+    justify-content: center; /* centrado horizontal */
+    align-items: center; /* centrado vertical */
+}
+.imagen{ /* imagen a lado del título*/
+	width: 100px;
+    height: 100px;
+	border-radius: 50%; /* para redondear la imagen, 50% es el límite */
+    /* margin-left: 10%; */
+}
+#titulo{ /* título HOPISTAL MATERNO INFANTIL DE IRAPUATO*/
+	margin: 0 0 0 2%;
+	/* arriba, derecha, abajo, izquierda*/
+}
+#linkmenu{ /* contenedor de menu */
+	width: 300px;
+	display: flex;
+	/* es necesario para la siguiente instruccion */
+	justify-content: flex-end;
+}
+#menu{
+	text-decoration: none; /* para quitar las letras subrayadas */
+	color: black;
+	font-size: 25px;
+	padding: 15px;
+	border-left: 1px solid #74003f;
+}
+#menu:hover{ /* si el puntero pasa por encima se ilumina */
+	color: white;
+    /* box-shadow: inset 3px 3px 3px black; */
+    /* insent sirve para colocar la sombre dentro del boton */
+}
+
+
+.cont{ /* contenedor de la tabla*/
+    margin-left: 20%; /* para centrarlo horizontalmente */
+}
+#botones{ /* contenedor de PERSONAL y listado */
+	display: flex; /* para poner uno al lado del otro */
+	/* también es necesario para la siguiente instruccion */
+	align-items: center; /* centrado vertical */
+}
+#listado{ /* contenedor solo del boton Agregar */
+	width: 640px;
+	display: flex;
+	/* es necesario para la siguiente instruccion */
+	justify-content: flex-end;
+}
+.boton{
+    border-radius: 15%;
+    height: 30px;
+    width: 70px;
+	cursor: pointer; /* para que el puntero cambie */
+    box-shadow: 3px 3px 3px black; /* agrega sombra al boton */
+    /* distancia derecha, distancia abajo, difuminacion, color de la sombra*/
+	margin-left: 8px;
+}
+.boton:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+    background-color: #74003f;
+	color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+}
+
+.contenedor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+table {
+	width: 800px;
+	border-collapse: collapse;
+	overflow: hidden;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th,
+td {
+	padding: 15px;
+	background-color: rgba(255, 255, 255, 0.2);
+	color: #fff;
+}
+th {
+	text-align: left;
+	background-color: #8f5582;
+}
+tr:hover { /* si el puntero pasa por encima cambia de color */
+    background-color: rgba(82, 14, 62, 0.3);
+}
+td {
+	position: relative;
+}
+td:hover:before {
+				content: "";
+				position: absolute;
+				left: 0;
+				right: 0;
+				top: -9999px;
+				bottom: -9999px;
+				background-color: rgba(46, 2, 44, 0.253);
+				z-index: -1;
+}
+#BtnEliminar, #BtnEditar{
+    background-color: brown;
+    color: white;
+    padding: 2px;
+    text-decoration: none;  /* para quitar las letras subrayadas */
+    border: 1px solid white;
+    font-size: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px inset white;
+}
+#BtnEliminar:hover, #BtnEditar:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+	color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+	border: 1px solid black;
+}
+
+h2{ /* Título HOSPITAL MATERNO INFANTIL DE IRAPUATO*/
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+}
+h4{ /* Mensaje PERSONAL */
+    padding: 20px 15px;
+    /* text-align: left; */
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-transform: uppercase; /* transforma a mayúsculas */
+}
+
+#formusuarios{ /* diseño del formulario modal */
+    width: 380px;
+    height: 260px;
+    margin: auto;
+    margin-top: 15px;
+    background-color: rgb(209, 162, 199);
+    border-radius: 10px;
+    box-shadow: 10px 10px #74003f;
+}
+#guardar, #cerrar{
+    border-radius: 15%;
+    height: 30px;
+    width: 70px;
+	cursor: pointer; /* para que el puntero cambie */
+    box-shadow: 3px 3px 3px black; /* agrega sombra al boton */
+    /* distancia derecha, distancia abajo, difuminacion, color de la sombra*/
+	margin-right: 10px;
+}
+#guardar:hover, #cerrar:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+    background-color: #74003f;
+	color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+}
+
+#modal{ /* sirve para ocultar y aparecer el formulario */
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 24, 44, 0.548);
+}
+
+
+#formusuarios2{ /* diseño del formulario modal en editar.php*/
+	width: 380px;
+	height: 300px;
+	margin: auto;
+	margin-top: 15px;
+	background-color: rgb(209, 162, 199);
+	border-radius: 10px;
+	box-shadow: 10px 10px #74003f;
+}
+/* botón para guardar las modificaciones del formulario en editar.php */
+#actualizar{
+    border-radius: 15%;
+    height: 30px;
+    width: 70px;
+	cursor: pointer; /* para que el puntero cambie */
+    box-shadow: 3px 3px 3px black; /* agrega sombra al boton */
+    /* distancia derecha, distancia abajo, difuminacion, color de la sombra*/
+	margin-right: 10px;
+}
+#actualizar:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+    background-color: #74003f;
+	color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+}
+
+#modaluno,#modaldos,#modaltres,#modalcuatro,#modalcinco,#modalseis,#modalsiete{
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 24, 44, 0.548);
+}

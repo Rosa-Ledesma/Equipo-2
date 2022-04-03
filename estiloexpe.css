@@ -1,0 +1,249 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background: linear-gradient(45deg, #b9699f, #80bbd3);
+}
+
+.seccionesli{
+    width: 100%;
+    max-width: 98%;
+    margin-top: 30px;
+    margin: 10px;
+}
+
+ul.tabs{
+    width: 100%;
+    height: 100%;
+    background-color: rgb(202, 134, 176);
+
+    list-style:none ;
+    display: flex;
+}
+
+ul.tabs li{
+    width: 18%;
+    /* line-height: 200px; */
+    /* vertical-align: middle; */
+    /* padding: auto; */
+}
+
+ul.tabs li a{
+    color: beige;
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    /* padding:auto; */
+    padding-top: 15px;
+    /* padding-bottom: 20px; */
+    padding-bottom: auto;
+    text-align: center;
+    display: block;
+    /* padding: 20px 0px; */
+    /* height: 100%; */
+    height: 50px;
+
+}
+
+.active{
+    background: rgb(184, 71, 141);
+}
+
+ul.tabs li a .tab-text{
+    margin-left: 8px;
+}
+
+#BtnEliminar, #BtnEditar{
+    background-color: rgb(70, 16, 133);
+    color: white;
+    padding: 2px;
+    text-decoration: none;  /* para quitar las letras subrayadas */
+    border: 1px solid white;
+    font-size: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px inset white;
+}
+#BtnEliminar:hover, #BtnEditar:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+	color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+	border: 1px solid black;
+}
+.ClaseBtnEditar{
+    position: absolute;
+    margin-left: 500px;
+    /* margin-right: 40px; */
+    margin-top: 3px;
+}
+
+.secciones{
+    width: 100%;
+    background-color: beige;
+}
+
+.secciones article{
+    padding: 10px;
+}
+
+.secciones article p{
+    text-align: justify;
+}
+
+.titulos{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: #ceb3c8;
+    color: rgb(83, 28, 100);
+}
+
+.radiobutton{
+    text-align: left;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+th{
+    color: beige;
+    /* text-align: center; */
+}
+th,
+td {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+th {
+    text-align: left;
+    /* text-align: center; */
+    background-color: #8f5582;
+}
+
+/* h2{
+    width: 100%;
+} */
+
+#guardar, #cerrar, #actualizar{
+    border-radius: 15%;
+    height: 30px;
+    width: 70px;
+	cursor: pointer; /* para que el puntero cambie */
+    box-shadow: 3px 3px 3px black; /* agrega sombra al boton */
+    /* distancia derecha, distancia abajo, difuminacion, color de la sombra*/
+	margin-right: 10px;
+}
+#guardar:hover, #cerrar:hover, #actualizar:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+    background-color: #74003f;
+	color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+}
+
+#modal{
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 24, 44, 0.548);
+    }
+
+#formpacientes{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(209, 162, 199);
+    border-radius: 10px;
+    box-shadow: 10px 10px #74003f;
+    padding: 15px;
+}
+
+#modaluno,#modaldos,#modaltres,#modalcuatro,#modalcinco,#modalseis,#modalsiete{
+    /* display: none; */
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 24, 44, 0.548);
+}
+
+#formIdUnidad{
+    height: 200px;
+}
+#formSignosVyS{
+    height: 700px;
+}
+#formConsulta{
+    height: 390px;
+}
+#formSaludR{
+    height: 570px;
+}
+#formIdUnidad,#formDatosPaciente,#formSignosVyS,#formConsulta,#formSaludR,#formOtrosE,#formControlyS{
+    width: 500px;
+    /* height: 500px; */
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(209, 162, 199);
+    border-radius: 10px;
+    box-shadow: 10px 10px #74003f;
+    padding: 15px;
+}
+.titu{ /* contenedor de la imagen, el titulo y linkmenu */
+	border: 5px inset #74003f; /* borde de 3px de ancho de color rosa */
+	/* el estilo del borde es 3D */
+    margin: 15px;
+    height: 135px;
+	padding-left: 10px;
+    display: flex;
+	/* coloca el titulo a lado de la imagen */
+	/* también es necesario para las otras dos instrucciones */
+    justify-content: center; /* centrado horizontal */
+    align-items: center; /* centrado vertical */
+}
+.imagen{ /* imagen a lado del título*/
+	width: 100px;
+    height: 100px;
+	border-radius: 50%; /* para redondear la imagen, 50% es el límite */
+    /* margin-left: 10%; */
+}
+#titulo{ /* título HOPISTAL MATERNO INFANTIL DE IRAPUATO*/
+	margin: 0 0 0 2%;
+    font-size: 30px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 15px;
+	/* arriba, derecha, abajo, izquierda*/
+}
+#linkmenu{ /* contenedor de menu */
+	width: 300px;
+	display: flex;
+	/* es necesario para la siguiente instruccion */
+	justify-content: flex-end;
+}
+#menu{
+	text-decoration: none; /* para quitar las letras subrayadas */
+	color: black;
+	font-size: 25px;
+	padding: 15px;
+	border-left: 1px solid #74003f;
+}
+#menu:hover{ /* si el puntero pasa por encima se ilumina */
+	color: white;
+    /* box-shadow: inset 3px 3px 3px black; */
+    /* insent sirve para colocar la sombre dentro del boton */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Inicio de Usuario</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+
+<!-- Contenedor para ingreso de datos de acceso -->
+<body class="contenedor">
+    <div class="titulo">
+        <img class="logo" src="logo_hospital.jpg" alt="Hospital Materno">
+        <h1>Hospital Materno de Irapuato</h1>
+    </div>
+    <div>
+        <form name="usuarios" action="funciones.php" method="post">
+            <table>
+                <tr>
+                    <th rowspan="3">
+                        <!-- Une los cuadros en una columna -->
+                        <img class="inicio" src="bienvenidos.png" alt="">
+                        <h3>¡Bienvenido!</h3>¿Eres Administrador?
+                        <i>Inicia Sesión</i> <!-- Italic. Pone la letra en cursiva -->
+                    </th>
+                    <th scope="row">
+                        <h2>Usuario</h2>
+                    </th>
+                    <td>
+                        <span class="cnt">
+                            <input name="usuario" type="text" class="Input" value="" size="25" />
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row">
+                        <h2>Contraseña</h2>
+                    </th>
+                    <td>
+                        <span class="cnt">
+                            <input name="contraseña" type="password" class="Input" value="" size="25" />
+                        </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <!-- Une los cuadros en una fila -->
+                        <span class="cnt"> 
+                            <input value="Ingresar" target="_parent" type="submit" class="boton" />
+                        </span>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

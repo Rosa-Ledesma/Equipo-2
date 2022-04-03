@@ -1,0 +1,176 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+body{
+    background-image: url('fondo2.jpg'); /* agrega una imagen de fondo*/
+    background-repeat: no-repeat; /* para que no repita la imagen */
+    background-size: cover; /* para que la imagen cubra todo */
+    background-position: center; /* siempre aparece el centro */
+    background-attachment: fixed; /* mantener fija la imagen */
+}
+.titulo{ /* contenedor de la imagen y el titulo */
+    border: 3px solid #74003f; /* borde de 3px de ancho, estilo solido de color rosa */
+    margin: 15px;
+    height: 130px;
+    padding: 10px;
+    display: flex;
+    /* coloca el titulo a lado de la imagen */
+    /* también es necesario para las otras dos instrucciones */
+    justify-content: center; /* centrado horizontal */
+    align-items: center; /* centrado vertical */
+    background: linear-gradient(90deg, #69b7eb, #b3dbd3, #f4d6db) ;
+}
+.logo{
+    width: 100px;
+    height: 100px;
+}
+h1{ /* título */
+    text-align: center;
+    margin-left: 1%;
+}
+
+.contenedor{ /* contenedor del nav y la tabla */
+    display: flex; /* coloca uno a lado del otro */
+    /* también es necesario para las otras dos instrucciones */
+    justify-content: center; /* centrado horizontal */
+}
+#linkmenu{ /* nav contenedor de los links */
+    background-color: #ffa8d9;
+    border: 3px solid hwb(181 12% 56% / 0.763);
+    margin: 20px;
+    padding: 10px;
+}
+a{ /* links */
+    display: block; /* coloca un link debajo del otro */
+    color: black;
+    text-decoration: none;  /* para quitar las letras subrayadas */
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+a:hover{ /* si el puntero pasa por encima, se ilumina */
+    /* color: white; */
+    background-color: #e290dfec;
+}
+.buscador{ /* contenedor del input que sirve para busqueda de los datos */
+    width: 820px;
+    display: flex;
+    /* es necesario para la siguiente instruccion */
+    justify-content: flex-end;
+    margin: 10px;
+}
+input{
+    border: 1.5px solid black;
+    padding: 5px;
+    border-radius: 7px;
+    /* box-shadow: 0 0 0 1px red; */
+}
+#contabla{ /* contenedor de la tabla */
+    height: 400px;
+    width: 820px;
+    background-color: #d7f0f4d6;
+    border: 4px solid;
+    border-image: linear-gradient(135deg, #5cb4eed7, #c487d5e0, #d587b3e0) 1; 
+    margin: auto;
+    padding: 10px;
+    /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); */
+}
+
+#datos { /* tabla */
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+}
+#datos tr:nth-child(even) { /* intercala el color entre filas */
+    background: #69a8b9;
+}
+#datos td {
+    padding: 5px;
+}
+/* noSearch hide se trata de las coincidencias encontradas  */
+#datos tr.noSearch {
+    background: White;
+    font-size: 0.8em;
+}
+#datos tr.noSearch td {
+    padding-top: 10px;
+    text-align: right;
+}
+.hide {
+    display: none;
+}
+.red {
+    color: Red;
+}
+th{
+    background-color: rgb(42, 118, 165);
+    padding: 8px;
+    color: #fff;
+}
+td:hover{ /* si el puntero pasa por encima cambia de color */
+    background-color: rgba(101, 141, 160, 0.536);
+}
+
+.Visita{ /* columna Visitar de la tabla */
+    width: 80px;
+}
+#BtnVisitar{
+    width: 70%;
+    background-color: #74003f;
+    color: white;
+    padding: 2px;
+    text-decoration: none;  /* para quitar las letras subrayadas */
+    border: 1px solid white;
+    font-size: 15px;
+    border-radius: 4px;
+    box-shadow: 1px 1px 2px inset white;
+}
+#BtnVisitar:hover{ /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+    color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+    border: 1px solid black;
+}
+
+/* De mi cosecha */
+#modal{
+    display: none;
+    position: fixed;
+    text-align: center;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(92, 24, 44, 0.548);
+    }
+
+#formpacientes{
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    margin-top: 30px;
+    background-color: rgb(209, 162, 199);
+    border-radius: 10px;
+    box-shadow: 10px 10px #74003f;
+    padding: 15px;
+}
+
+#uno{
+display: none;
+}
+#dos{
+    display: none;
+}
+#tres{
+    display: none;
+}
+#cuatro{
+    display: none;
+}
+#cinco{
+    display: none;
+}
