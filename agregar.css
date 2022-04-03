@@ -1,39 +1,57 @@
-Ana Karen MHdez
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     width: auto;
     height: auto;
-}
+} */
 body {
     /* background: #ffa17f;
     background: -webkit-linear-gradient(to right, #00223e, #ffa17f); */
     background: linear-gradient(to right, #053053, #6e68bd, #d0a6e2, #ffa17f);
     /* overflow: hidden; */
 }
-#modal {
-    text-shadow: 0 0 20px white; /* coordenada x, coordenada y, radio de desenfoque, color de sombra */
-}
-.titulo {
-    /* contenedor de la imagen y el titulo */
+.titu { /* contenedor del titulo y linkmenu */
     background-color: rgba(0, 0, 0, 0.2); /* red green blue alpha que es la opacidad o transparencia */
     border-radius: 8%;
-    margin: 15px;
-    padding: 5px;
+    margin: 18px;
+	padding-left: 10px;
     display: flex;
-    /* es necesario para la siguiente instruccion */
+	/* coloca el titulo a lado de la imagen */
+	/* también es necesario para las otras dos instrucciones */
     justify-content: center; /* centrado horizontal */
-
+    align-items: center; /* centrado vertical */
+}
+.titulo { /* contenedor título Pacientes */
+    padding: 5px;
+    margin: 0 5% 0 0; /* arriba, derecha, abajo, izquierda*/
     color: #FFF;
     font: italic bold 22px Georgia, Serif;
     text-shadow: -4px 2px 0 rgb(103, 103, 255),
                  -9px 5px 0 #0a0e27;
-     /* coordenada x, coordenada y, radio de desenfoque, color de sombra */
+    /* coordenada x, coordenada y, radio de desenfoque, color de sombra */
 }
-h1 { /* título */
-    text-align: center;
+#linkmenu{ /* contenedor de menu */
+	width: 300px;
+	display: flex;
+	/* es necesario para la siguiente instruccion */
+	justify-content: flex-end;
 }
+#menu{
+	text-decoration: none; /* para quitar las letras subrayadas */
+	color: black;
+	font-size: 25px;
+	padding: 15px;
+	border-left: 1px solid #74003f;
+}
+#menu:hover{ /* si el puntero pasa por encima se ilumina */
+	color: white;
+}
+
+#modal{
+    text-shadow: 0 0 20px white; /* coordenada x, coordenada y, radio de desenfoque, color de sombra */
+}
+
 .a, .b, .c {
     display: flex;
     /* coloca unos a lados de otros */
@@ -55,7 +73,7 @@ h1 { /* título */
     height: 564px;
 }
 
-#guardar, #cerrar {
+#guardar {
     border-radius: 15%;
     border-color: #fcf6bd;
     height: 30px;
@@ -65,7 +83,7 @@ h1 { /* título */
     /* distancia derecha, distancia abajo, difuminacion, color de la sombra*/
     margin: 20px;
 }
-#guardar:hover, #cerrar:hover {
+#guardar:hover {
     /* si el puntero pasa por encima del boton cambian sus caracteristicas */
     background-color: purple;
     border-color: black;
