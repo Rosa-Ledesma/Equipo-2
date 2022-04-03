@@ -21,8 +21,9 @@
             $GradoDificultad=$_POST['GradoDificultad'];
             $OrigenDificultad=$_POST['OrigenDificultad'];
         }
-        mysqli_query($conectar, "INSERT INTO datosdelpaciente(Paciente, TipoDeDificultad, GradoDificultad, OrigenDificultad) 
-                                 VALUES ('$Paciente','$TipoDeDificultad','$GradoDificultad','$OrigenDificultad')");
+        $ControlySeguimiento=$_POST['opControlSeguimiento'];
+        mysqli_query($conectar, "INSERT INTO datosdelpaciente(Paciente, ControlySeguimiento, TipoDeDificultad, GradoDificultad, OrigenDificultad) 
+                                 VALUES ('$Paciente','$ControlySeguimiento','$TipoDeDificultad','$GradoDificultad','$OrigenDificultad')");
 
         $Peso=$_POST['Peso'];
         $Talla=$_POST['Talla'];
@@ -78,10 +79,6 @@
         $CancerCervicouterino=$_POST['opCancerCervicouterino'];
         mysqli_query($conectar, "INSERT INTO otroseventos(TerapiaHormonal, PeriPostMenopausia, ITS, ApoyoViolencia, PatologiaMamariaB, CancerMamario, Colposcopia, CancerCervicouterino) 
                                  VALUES ('$TerapiaHormonal','$PeriPostMenopausia','$ITS','$ApoyoViolencia','$PatologiaMamariaB','$CancerMamario','$Colposcopia','$CancerCervicouterino')");  
-
-        $ControlySeguimiento=$_POST['opControlSeguimiento'];
-        mysqli_query($conectar, "INSERT INTO datosdelpaciente(ControlySeguimiento) 
-                                 VALUES ('$ControlySeguimiento')");
      ?>
      <script language="JavaScript"> 
      window.location = 'menu.php';
