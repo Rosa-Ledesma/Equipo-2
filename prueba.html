@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prueba</title>
+    <!-- <script src="main.js"></script> -->
+    <style>
+        :root {
+    --color-green: #00a878;
+    --color-red: #fe5e41;
+    --color-button: #fdffff;
+    --color-black: #000;
+}
+.switch-button {
+    display: inline-block;
+}
+.switch-button .switch-button__checkbox {
+    display: none;
+}
+.switch-button .switch-button__label {
+    background-color: var(--color-red);
+    width: 5rem;
+    height: 3rem;
+    border-radius: 3rem;
+    display: inline-block;
+    position: relative;
+}
+.switch-button .switch-button__label:before {
+    transition: .2s;
+    display: block;
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    background-color: var(--color-button);
+    content: '';
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 0px 1px var(--color-black);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+    background-color: var(--color-green);
+}
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+    transform: translateX(2rem);
+}
+
+    </style>
+</head>
+<body>
+    <form id="miform" method="post" action="">
+        <li id="uno" >
+            <label class="description" >Correcto?</label>
+            <span>
+                <input id="eleA1" name="element_82" class="element radio" type="radio" value="1" required onclick="cambio(this.value);"/>
+                <label class="choice" >SI</label>
+                <input id="eleA2" name="element_82" class="element radio" type="radio" value="2" onchange="cambio(this.value);"/>
+                <label class="choice" >NO</label>
+            </span>
+        </li>
+            
+        <li id="dos" style="display: none;">
+            <label class="description" for="element_57">Categoría: </label>
+            <span id="ocu">
+                <input id="eleB1" name="element_57" class="element radio" type="radio" value="1" disabled />
+                <label class="choice" >Primera</label>
+                <input id="eleB2" name="element_57" class="element radio" type="radio" value="2" disabled />
+                <label class="choice" >Segunda</label>
+            </span>
+        </li>
+        <div class="switch-button">
+            <!-- Checkbox -->
+            <input type="checkbox" name="switch-button" id="switch-label" class="switch-button__checkbox">
+            <!-- Botón -->
+            <label for="switch-label" class="switch-button__label"></label>
+            
+            <!-- <button type="button" id="deshabiltar" class="btn btn-primary">Deshabiltar</button>
+            <button type="button" id="habilitar" class="btn btn-primary">Habilitar</button> -->
+        </div>
+        
+    </form>
+    <script language="javascript">
+
+        //se le asigna el id del boton
+       const btncontrol = document.getElementById('switch-label');
+        btncontrol.disabled = true; //deshabilita el boton
+
+
+
+        //le asignamos a las variables los id
+       var hab = document.getElementById('eleA1');
+        var nohab = document.getElementById('eleA2');
+        var res = document.getElementById('eleB1');
+        var res2 = document.getElementById('eleB2');
+
+        //invalida los radiobutton de acuerdo al escogido en el anterior
+        function updateStatus() {
+            if (hab.checked) {
+                res.disabled = true;
+                res2.disabled = true;
+               //oculta las opciones
+                document.getElementById("dos").style.display = "none";
+            } else {
+                //muestra las opciones
+                document.getElementById("dos").style.display = "block";
+                res.disabled = false;
+                res2.disabled = false;
+
+            }
+          
+        }
+
+        //escucha el evento cada que se desencadena
+        hab.addEventListener('change', updateStatus)
+        nohab.addEventListener('change', updateStatus)
+    </script> 
+</body>
+</html>
