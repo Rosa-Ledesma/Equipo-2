@@ -1,0 +1,75 @@
+Ana Karen MHdez
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+}
+body {
+    /* background: #ffa17f;
+    background: -webkit-linear-gradient(to right, #00223e, #ffa17f); */
+    background: linear-gradient(to right, #053053, #6e68bd, #d0a6e2, #ffa17f);
+    /* overflow: hidden; */
+}
+#modal {
+    text-shadow: 0 0 20px white; /* coordenada x, coordenada y, radio de desenfoque, color de sombra */
+}
+.titulo {
+    /* contenedor de la imagen y el titulo */
+    background-color: rgba(0, 0, 0, 0.2); /* red green blue alpha que es la opacidad o transparencia */
+    border-radius: 8%;
+    margin: 15px;
+    padding: 5px;
+    display: flex;
+    /* es necesario para la siguiente instruccion */
+    justify-content: center; /* centrado horizontal */
+
+    color: #FFF;
+    font: italic bold 22px Georgia, Serif;
+    text-shadow: -4px 2px 0 rgb(103, 103, 255),
+                 -9px 5px 0 #0a0e27;
+     /* coordenada x, coordenada y, radio de desenfoque, color de sombra */
+}
+h1 { /* título */
+    text-align: center;
+}
+.a, .b, .c {
+    display: flex;
+    /* coloca unos a lados de otros */
+    /* también es necesario para la siguiente instruccion */
+    justify-content: center; /* centrado horizontal */
+}
+#uno, #dos, #tres, #cuatro, #cinco, #seis, #siete {
+    background-color: rgba(0, 0, 0, 0.1); /* red green blue alpha que es la opacidad o transparencia */
+    border-radius: 2%;
+    margin: 10px;
+}
+.c1f1, .c2f1, .c1f2, .c2f2 {
+    width: 460px;
+}
+#uno fieldset, #dos fieldset, #cuatro fieldset {
+    margin-bottom: 7%;
+}
+#cinco fieldset {
+    height: 564px;
+}
+
+#guardar, #cerrar {
+    border-radius: 15%;
+    border-color: #fcf6bd;
+    height: 30px;
+    width: 70px;
+    cursor: pointer; /* para que el puntero cambie */
+    box-shadow: 3px 3px 3px black; /* agrega sombra al boton */
+    /* distancia derecha, distancia abajo, difuminacion, color de la sombra*/
+    margin: 20px;
+}
+#guardar:hover, #cerrar:hover {
+    /* si el puntero pasa por encima del boton cambian sus caracteristicas */
+    background-color: purple;
+    border-color: black;
+    color: white;
+    box-shadow: inset 3px 3px 3px black;
+    /* insent sirve para colocar la sombre dentro del boton */
+}
