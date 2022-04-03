@@ -12,11 +12,14 @@
     <script src="main.js"></script>
 </head>
 <body>
-    <div id="modal">
+    <div class="titu">
         <div class="titulo">
             <h1>Pacientes</h1>
         </div>
-
+        <nav id="linkmenu">
+            <a href="menu.php" id="menu">MENU</a>
+        </nav>
+    </div>
         <form action="agregaExpediente.php" id="formpacientes" method="post">
             <div class="a">
                 <div class="c1f1">
